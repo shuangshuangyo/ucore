@@ -1,0 +1,1067 @@
+const MyContractAddress = "0x0511d4503C015e16C1e621128eD0f7B488d8AdbE";
+const MABI =[
+	{
+		"inputs": [
+			{
+				"internalType": "contract IERC20",
+				"name": "_usdt",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_ceoAddress",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "EGGS_TO_HATCH_1MINERS",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "addBlacklist",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "blacklist",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "bought",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "ref",
+				"type": "address"
+			}
+		],
+		"name": "buyEggs",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "eth",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "contractBalance",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateEggBuy",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "eth",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateEggBuySimple",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "eggs",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateEggSell",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "rt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rs",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "bs",
+				"type": "uint256"
+			}
+		],
+		"name": "calculateTrade",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "ceoAddress",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "claimedEggs",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "devFee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "adr",
+				"type": "address"
+			}
+		],
+		"name": "getEggsSinceLastHatch",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMyEggs",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMyMiners",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "ref",
+				"type": "address"
+			}
+		],
+		"name": "hatchEggs",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "hatcheryMiners",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "initialized",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "isOwner",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "lastHatch",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "marketEggs",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "ref",
+				"type": "address"
+			}
+		],
+		"name": "redemption",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "referrals",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "removeBlacklist",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "seedMarket",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "sellEggs",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "usdt",
+		"outputs": [
+			{
+				"internalType": "contract IERC20",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+const UsdtAddress = "0x912CE59144191C1204E64559FE8253a0e49E6548";
+const UsdtAbi = [
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "delegate",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "delegate",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numTokens",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "tokenOwner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply_",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numTokens",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "numTokens",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+
+var myContract,usdtContract;
+var allowanceAmount = 0;
+var MAX_NUMBER = '100000000000000000000000';
+var coinbase = '';
+const metamaskChainID = 42161;
+const metamaskHexChainID = "0xa4b1";
+const symbol = "ARB";
+$(function(){
+	main()
+})
+async function main(){
+
+	if (typeof web3 !== "undefined") {
+		web3 = new Web3(window.ethereum);
+		await web3.eth.requestAccounts().then( res =>{getChain();})
+		// console.log(coinbase)
+		// $("#address").text(coinbase.substring(0, 14) + "...");
+		myContract = new web3.eth.Contract(MABI,MyContractAddress) //await web3.contract().at(MyContractAddress)
+		usdtContract = new web3.eth.Contract(UsdtAbi,UsdtAddress)
+		// getChain()
+		setInterval(connectWallet,5000)
+		
+	} else {
+		console.log("Please install metaMask or Waiting for metaMask")
+		setTimeout(main,1000);
+	}
+}
+
+function getChain() {
+	web3.eth.getChainId().then(function (chainId) {
+	  if (chainId == metamaskChainID) {
+		connectWallet();
+	  } else {
+		window.ethereum.request({
+		  "method": "wallet_switchEthereumChain",
+		  "params": [{
+			"chainId": metamaskHexChainID
+		  }]
+		}).then(() => {
+		  connectWallet();
+		}).catch(err => {console.log("switch error:",err)
+		  window.ethereum.request({
+			"method": "wallet_addEthereumChain",
+			"params": [{
+			  "chainId": metamaskHexChainID,
+			  "chainName": "Arbitrum One",
+			  "rpcUrls": ["https://arbitrum-mainnet.infura.io"],
+			  "nativeCurrency": {
+				"name": "ETH",
+				"symbol": "",
+				"decimals": 18
+			  },
+			  "blockExplorerUrls": ["https://explorer.arbitrum.io/"]
+			}]
+		  }).catch(err=>{
+			console.log("add err:",err)
+		  });
+		});
+	  }
+	});
+  }
+
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURI(r[2]);
+    return null;
+}
+async function connectWallet() {
+  coinbase = await web3.eth.getCoinbase();
+  console.log("coinbase",coinbase);
+  var allowance = await usdtContract.methods.allowance(coinbase,MyContractAddress).call({
+	"from":coinbase
+  });
+  allowanceAmount = web3.utils.fromWei(allowance,'ether');
+  
+  if(allowanceAmount > 0) {
+  	$('.buyButton').html("RoastARB");
+  	
+  } else {
+  	$('.buyButton').html("APPROVE");
+  }
+
+  $("#address").text(coinbase.substring(0, 14) + "...");
+  balance = await usdtContract.methods.balanceOf(coinbase).call({
+	"from":coinbase
+  })  //web3.eth.getBalance(coinbase);
+  $("#balance").text(parseFloat(web3.utils.fromWei(balance,'ether')).toFixed(3) + " " + symbol);
+  getContractInfo();
+}
+
+async function getContractInfo() {
+  //myContract = new web3.eth.Contract(ABI, Address);
+
+  const poolBalance = await myContract.methods.getBalance().call({
+    "from": coinbase
+  });
+
+  $("#pool").text(parseFloat(web3.utils.fromWei(poolBalance,'ether')).toFixed(3) + " " + symbol);
+
+  const miners = await myContract.methods.getMyMiners().call({
+    "from": coinbase
+  });
+//   console.log("miner",miners)
+  $("#egg").text(miners);
+
+  const eggs = await myContract.methods.getMyEggs().call({
+    "from": coinbase
+  });
+  
+  if(eggs > 0){
+	const reward = await myContract.methods.calculateEggSell(eggs).call({
+		"from":coinbase
+	  });
+	  $("#reward").text(parseFloat(web3.utils.fromWei(reward,'ether')).toFixed(5) + " " + symbol);
+  }else{
+	$("#reward").text( "0.000 " + symbol);
+  }
+  
+
+}
+
+async function approve() {
+	var res = await usdtContract.methods.approve(MyContractAddress, MAX_NUMBER).send({
+		"from":coinbase
+	})
+  if(res){
+    alert("approve success,wait for block submit");
+  }		
+}
+
+async function go() {
+	const chainId = await web3.eth.getChainId();
+	if(chainId != metamaskChainID){
+		alert("Please select the right netWork");
+		return;
+	}
+	if(allowanceAmount > 0){
+		var value = web3.utils.toWei($("#price").val(), "ether");
+		if (location.href.includes("ref")) {
+			var ref = GetQueryString("ref");
+			myContract.methods.buyEggs(value,ref).send({
+				"from": coinbase,
+			}).then(function (res) {
+				connectWallet();
+			}).catch( e =>{
+				console.log(e)
+			});
+		} else {
+			var ref = "0x0000000000000000000000000000000000000000"
+			myContract.methods.buyEggs(value,ref).send({
+				"from": coinbase,
+			}).then(function (res) {
+				connectWallet();
+			}).catch( e =>{
+				console.log(e)
+			});
+		}
+	}else{
+		approve()
+	}		
+}
+
+async function goAgain() {
+  const chainId = await web3.eth.getChainId();
+  if(chainId != metamaskChainID){
+  	alert("Please select the right netWork");
+  	return;
+  }
+  myContract.methods.hatchEggs(coinbase).send({
+    "from": coinbase
+  }).then(function (res) {
+    connectWallet();
+  });
+  
+}
+
+async function withdraw() {
+  const chainId = await web3.eth.getChainId();
+  if(chainId != metamaskChainID){
+  	alert("Please select the right netWork");
+  	return;
+  }
+  myContract.methods.sellEggs().send({
+    "from": coinbase
+  }).then(function (_0x54ccfd) {
+    connectWallet();
+  });
+  
+}
+
+async function copyButton() {
+  var _0x2f6cb6 = document.createElement("textarea");
+
+  document.body.appendChild(_0x2f6cb6);
+  _0x2f6cb6.style.position = "fixed";
+  _0x2f6cb6.style.clip = "rect(0 0 0 0)";
+  _0x2f6cb6.style.top = "10px";
+  _0x2f6cb6.value = "https://www.roastedarb.com/?ref=" + coinbase;
+
+  _0x2f6cb6.select();
+
+  document.execCommand("copy", true);
+  document.body.removeChild(_0x2f6cb6);
+  alert("Copy success!");
+}
+
+ethereum.on("accountsChanged", _0x15ca58 => {
+  web3.eth.getChainId().then(function (_0x36ce3f) {
+    _0x36ce3f == metamaskHexChainID && connectWallet();
+  });
+});
+
+function submit(){
+	var email = $("#email").val();
+	//定义正则表达式
+	var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+	//进行正则验证
+	if (!emailPattern.test(email)) {
+		//如果email不符合正则表达式，则弹出警告框
+		alert('请输入有效的电子邮件地址！');
+		return;
+	}
+	$.ajax({
+		url: 'form.php', //要提交POST请求的API URL
+		type: 'POST',
+		data: {
+			email: email, //提交的email数据
+			address: coinbase //提交的address数据
+		},
+		dataType: 'json',
+		success: function(response) {
+			//成功响应时的回调函数
+			console.log(response);
+			alert(response.message);
+		},
+		error: function(xhr, status, error) {
+			//失败响应时的回调函数
+			console.log(xhr.responseText);
+			alert(response.message)
+		}
+	});
+	
+}
